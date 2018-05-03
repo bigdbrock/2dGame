@@ -11,6 +11,17 @@ import java.awt.image.BufferStrategy;
 import javax.swing.JFrame;
 
 public class Game extends Canvas implements Runnable, KeyListener {
+	/**
+	 * 
+	 * OBJECTIVES:
+	 * 1. Create the illusion of a "moving world" or a screen that moves around.
+	 * 2. Create an object on screen that will move as the user wants.
+	 * 3. Incorporate some sort of physics (gravity) into the object's behavior.
+	 * 4. Demonstrate colors.
+	 * 5. Demonstrate inheritance.
+	 * 
+	 * @Author Darren
+	 */
 	
 	private static final long serialVersionUID = 1L;
 	public static final int WIDTH = 800, HEIGHT = 600;
@@ -33,8 +44,8 @@ public class Game extends Canvas implements Runnable, KeyListener {
 		if(running) {
 			return;
 		}
-		
-		running = true;
+		//hello world
+		running = true;  
 		thread = new Thread(this);
 		thread.start();
 	}
@@ -65,7 +76,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 		
 		Graphics g = bs.getDrawGraphics();
 		g.setColor(Color.BLUE);
-		g.fillRect(0, 0, WIDTH, HEIGHT);
+		g.fillRect(0, 0, WIDTH, HEIGHT); 
 		
 		world.render(g);
 		entity.render(g);
